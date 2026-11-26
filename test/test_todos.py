@@ -75,3 +75,8 @@ def test_create_todos():
     response = client.post("/create/", json=request_data)
     assert response.status_code == status.HTTP_201_CREATED
     assert response.json() == {"message": "To do created successfully"}
+    
+def test_delete_todo():
+    response = client.delete('/delete/99')
+    assert response.status_code == status.HTTP_200_OK
+    assert response.json() == {'message' : 'To do deleted successfully'}
