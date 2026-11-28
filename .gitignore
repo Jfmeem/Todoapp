@@ -5,3 +5,6 @@ __pycache__/
 venv/
 .vscode/
 *.db
+.env
+.env.*
+!.env.example
